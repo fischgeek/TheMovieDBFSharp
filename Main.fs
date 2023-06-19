@@ -1,7 +1,11 @@
 ﻿namespace TheMovieDBFSharp
 
+open System
+open System.IO
+
 module Main =
-    let apiKey = ""
+
+    let apiKey = File.ReadAllText @"apikey.txt"
     let baseMovieUrl = "https://api.themoviedb.org/3"
     let posterBaseUrl = "https://image.tmdb.org/t/p/original"
     let movieAuth = $@"api_key={apiKey}&language=en-US&page=1&include_adult=false"

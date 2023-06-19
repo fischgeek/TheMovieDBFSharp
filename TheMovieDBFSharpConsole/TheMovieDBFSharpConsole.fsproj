@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
     <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
@@ -8,15 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="paket.references" />
-    <Compile Include="Main.fs" />
+    <Content Include="apikey.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup />
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedUtils\Requesty\Requesty.fsproj" />
-    <ProjectReference Include="..\SharedUtils\SharedUtils\SharedUtils.fsproj" />
+    <ProjectReference Include="..\TheMovieDBFSharp.fsproj" />
   </ItemGroup>
 
 </Project>
