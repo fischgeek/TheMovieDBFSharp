@@ -9,8 +9,4 @@
     <Compile Include="Main.fs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\PublicRepos\SharedUtils\Requesty\Requesty.fsproj" />
-  </ItemGroup>
-
 </Project>
