@@ -9,7 +9,11 @@ printfn $"apikey: {Main.apiKey}"
 printf "Search movie: "
 let movie = "back to the future" //Console.ReadLine()
 printfn $"Getting results for '{movie}'..."
-let mr = GetMovie movie
+let mr = 
+    GetMovie movie
+    |> function
+    | Some x -> x
+    | None -> failwith "could not get movie."
 printfn $"Found: {mr.title}"
 printfn $"{mr.overview}"
 let poster = MatchResult.GetPosterFullUrl mr "w200"
