@@ -8,11 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="paket.references" />
+    <Compile Include="Types.fs" />
     <Compile Include="Main.fs" />
+    <None Include="paket.references" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <ProjectReference Include="..\SharedUtils\Requesty\Requesty.fsproj" />
